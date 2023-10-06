@@ -16,7 +16,14 @@ class Room{
         this->room_type=room_type;
         this->capacity=capacity;
     }
-    void print_detail(){
-       cout<<"\nRoom Type: "<<this->room_type<<"\nCapacity: "<<this->capacity;
+
+    Room(const Room &room){
+        this->room_type=room.room_type;
+        this->capacity=room.capacity;
     }
+
+    void print_detail(){
+        cout<<"\nRoom Type: "<<this->room_type<<"\nCapacity: "<<this->capacity;
+    }
+    
 };
