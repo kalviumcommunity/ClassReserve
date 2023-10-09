@@ -67,7 +67,7 @@ int main(){
 
     res1.view_reservation_detail();
 
-    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::count<<"\nTeacher: "<<Teacher::count<<"\nResearvarion: "<<Reservation::count;
+    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::count<<"\nTeacher: "<<Teacher::count<<"\nReservarion: "<<Reservation::count;
 
     return 0;
 }
