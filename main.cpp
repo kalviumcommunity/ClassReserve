@@ -49,6 +49,10 @@ Reservation create_reservation(Room room, Teacher tr){
 
 }
 
+int Room::count=0;
+int Teacher::count=0;
+int Reservation::count=0;
+
 int main(){
 
     // declaring single object of each class
@@ -57,9 +61,13 @@ int main(){
 
     Room r1=create_room();
     Teacher t1=create_teacher();
+    Teacher t2=create_teacher();
     Reservation res1=create_reservation(r1,t1);
+    Reservation res2=create_reservation(r1,t2);
 
     res1.view_reservation_detail();
+
+    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::count<<"\nTeacher: "<<Teacher::count<<"\nResearvarion: "<<Reservation::count;
 
     return 0;
 }
