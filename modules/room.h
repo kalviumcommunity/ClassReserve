@@ -6,6 +6,7 @@ class Room{
     int capacity;
 
     public:
+    static int count;
     Room(string room_type,int capacity){
         if(!(room_type=="classroom"||room_type=="lecture_hall")){
             throw invalid_argument("Invalid Room Type");
@@ -13,6 +14,7 @@ class Room{
         if(capacity<1){
             throw invalid_argument("Minimum Capacity is 1");
         }
+        count++;
         this->room_type=room_type;
         this->capacity=capacity;
     }
