@@ -101,7 +101,7 @@ int main(){
         res->view_reservation_detail();
     }
 
-    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::count<<"\nTeacher: "<<Teacher::count<<"\nReservarion: "<<Reservation::count;
+    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::get_count()<<"\nTeacher: "<<Teacher::get_count()<<"\nReservarion: "<<Reservation::get_count();
 
     //delete dynamically allocated object arrays 
     for(int i=0;i<room_count;i++){

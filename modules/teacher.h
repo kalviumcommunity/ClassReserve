@@ -4,9 +4,9 @@ class Teacher{
     private:
     string name;
     string department;
+    static int count;
 
     public:
-    static int count;
     Teacher(string name, string department){
         if(name.length()<3||department.length()<2){
             throw invalid_argument("Invalid Name/Dept.");
@@ -23,6 +23,10 @@ class Teacher{
     Teacher(const Teacher &tr){
         this->name=tr.name;
         this->department=tr.department;
+    }
+
+    static int get_count(){
+        return count;
     }
    
 };

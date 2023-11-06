@@ -7,9 +7,9 @@ class Reservation{
 
     string date; //dd-mm-yyyy
     int hour; // hour in 24hr format
+    static int count;
 
     public:
-    static int count;
     Reservation(Room room, Teacher teacher,string date, int hour){
         this->room=new Room(room);
         this->teacher=new Teacher(teacher);
@@ -29,6 +29,10 @@ class Reservation{
         room->print_detail();
         teacher->print_detail();
         cout<<"\nDate: "<<this->date<<"\nHour: "<<this->hour<<endl;
+    }
+
+    static int get_count(){
+        return count;
     }
 
     ~Reservation(){
