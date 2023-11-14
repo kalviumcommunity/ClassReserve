@@ -40,6 +40,10 @@ class HeadOfDept: public Teacher{
         this->assistant=assistant;
     }
 
+    HeadOfDept(const HeadOfDept &hod): Teacher(hod) {
+        this->assistant=hod.assistant;
+    }
+
     void print_detail(){
         cout<<"\nHOD Name: "<<this->name<<"\nDepartment: "<<this->department<<"\nAssistant: "<<this->assistant;
     }
