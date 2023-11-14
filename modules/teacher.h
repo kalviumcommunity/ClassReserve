@@ -1,7 +1,7 @@
 using namespace std;
 
 class Teacher{
-    private:
+    protected:
     string name;
     string department;
     static int count;
@@ -29,4 +29,18 @@ class Teacher{
         return count;
     }
    
+};
+
+class HeadOfDept: public Teacher{
+    private:
+    string assistant;
+
+    public:
+    HeadOfDept(string name, string department, string assistant): Teacher(name, department){
+        this->assistant=assistant;
+    }
+
+    void print_detail(){
+        cout<<"\nHOD Name: "<<this->name<<"\nAssistant: "<<this->department<<"\nDepartment: "<<this->assistant;
+    }
 };

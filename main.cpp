@@ -34,6 +34,24 @@ Teacher create_teacher(){
     return tr;
 }
 
+HeadOfDept create_hod(){
+    string name;
+    string department;
+    string assistant;
+
+    cout<<"\n:::::Adding HOD:::::\n\n";
+    cout<<"Please enter the HOD name: ";
+    cin.ignore();
+    getline(cin,name);
+    cout<<"Please enter the department: ";
+    getline(cin,department);
+    cout<<"Please enter the assistant name: ";
+    getline(cin,assistant);
+
+    HeadOfDept hod(name,department,assistant);
+    return hod;
+}
+
 Reservation create_reservation(Room room, Teacher tr){
     string date;
     int hour;
@@ -101,7 +119,10 @@ int main(){
         res->view_reservation_detail();
     }
 
-    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::get_count()<<"\nTeacher: "<<Teacher::get_count()<<"\nReservarion: "<<Reservation::get_count();
+    HeadOfDept hod=create_hod();
+    hod.print_detail();
+
+    cout<<"\n\n:::Total Count:::\nRoom: "<<Room::get_count()<<"\nTeacher: "<<Teacher::get_count()<<"\nReservation: "<<Reservation::get_count();
 
     //delete dynamically allocated object arrays 
     for(int i=0;i<room_count;i++){
