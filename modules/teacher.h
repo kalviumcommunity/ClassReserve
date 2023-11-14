@@ -41,6 +41,6 @@ class HeadOfDept: public Teacher{
     }
 
     void print_detail(){
-        cout<<"\nHOD Name: "<<this->name<<"\nAssistant: "<<this->department<<"\nDepartment: "<<this->assistant;
+        cout<<"\nHOD Name: "<<this->name<<"\nDepartment: "<<this->department<<"\nAssistant: "<<this->assistant;
     }
 };
