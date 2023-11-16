@@ -3,6 +3,7 @@
 #include "modules/teacher.h"
 #include "modules/reservation.h"
 #include "modules/course.h"
+#include "modules/staff.h"
 
 using namespace std;
 
@@ -148,6 +149,14 @@ int main(){
 
     btech.printDetail();
     mtech.printDetail();
+
+    Admin a1;
+    a1.getInput();
+    a1.showDetail();
+
+    HouseKeeping hk1;
+    hk1.getInput();
+    hk1.showDetail();
 
 
     return 0;
