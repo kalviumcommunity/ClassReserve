@@ -2,6 +2,7 @@
 #include "modules/room.h"
 #include "modules/teacher.h"
 #include "modules/reservation.h"
+#include "modules/course.h"
 
 using namespace std;
 
@@ -136,6 +137,18 @@ int main(){
     for(int i=0;i<res_count;i++){
         delete reservations[i];
     }
+
+    cout<<"\n\n:::::Creating a Bachelors Course:::::\n";
+    Bachelors btech;
+    btech.getInput();
+    
+    cout<<"\n\n:::::Creating a Masters Course:::::\n";
+    Masters mtech;
+    mtech.getInput();
+
+    btech.printDetail();
+    mtech.printDetail();
+
 
     return 0;
 }
